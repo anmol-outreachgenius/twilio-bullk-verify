@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src = './script.js'></script>
+    <title>Phone Number Lookup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #results {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Phone Number Lookup</h1>
+    <form id="lookupForm">
+        <div>
+            <label for="accountSid">Twilio Account SID:</label><br>
+            <input type="text" id="accountSid" name="accountSid" required><br>
+        </div>
+        <div>
+            <label for="authToken">Twilio Auth Token:</label><br>
+            <input type="text" id="authToken" name="authToken" required><br>
+        </div>
+        <div>
+            <label for="phoneNumbers">Phone Numbers (comma-separated):</label><br>
+            <textarea id="phoneNumbers" name="phoneNumbers" rows="4" required></textarea><br>
+        </div>
+        </div>
+        <button type="submit">Lookup Phone Numbers</button>
+    </form>
+
+    <div id="results"></div>
+</body>
+</html>
